@@ -1,0 +1,10 @@
+en:
+  navbar:
+    home: Home
+    profile: My Bulletins
+    add_bulletin: Add Bulletin
+    admin_panel: Admin Panel
+    logout: Logout
+    login: Sign in with GitHub
+    change_access: Change privileges
+    repos: Repositories

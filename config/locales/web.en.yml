@@ -1,0 +1,13 @@
+en:
+  web:
+    auth:
+      signed_in: You have successfully logged in. Welcome!
+      logout:
+        signed_out: You have successfully logged out. Have a nice day!
+    home:
+      index:
+        Greetings: Greetings from Owls' Cathcer
+        cv: Read my CV
+        header: Repository Quality Analyzer
+        info: "A project that helps you automatically monitor the quality of repositories on Github. It tracks changes and runs them through built-in analyzers. Then generates reports and sends them to the user."
+        github_source: Source code

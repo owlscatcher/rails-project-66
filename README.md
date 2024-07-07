@@ -1,12 +1,14 @@
 ### Hexlet tests and linter status:
+
+[![CI Status](https://github.com/owlscatcher/rails-project-66/actions/workflows/main.yml/badge.svg)](https://github.com/owlscatcher/rails-project-66/actions)
 [![Actions Status](https://github.com/owlscatcher/rails-project-66/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/owlscatcher/rails-project-66/actions)
 
 # Repository quality
 
-The Github Quality project is a service where developers can run code checks on their repositories 
+The Github Quality project is a service where developers can run code checks on their repositories
 and get a report on the state of the codebase, current bugs.
 
-Project published on render: https://bb.owlpaw.com/
+Project published on render: https://rq.owlpaw.com/
 
 ## Local installation
 
@@ -43,4 +45,3 @@ make lint
 ```bash
 make test
 ```
-
