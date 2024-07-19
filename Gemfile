@@ -55,6 +55,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate'
   gem 'web-console'
 end
 
@@ -88,3 +89,5 @@ gem 'simple_form'
 gem 'slim', '~> 5.2', '>= 5.2.1'
 gem 'slim_lint', '~> 0.27.0'
 gem 'slim-rails', '~> 3.6', '>= 3.6.3'
+
+gem 'octokit'

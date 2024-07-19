@@ -1,0 +1,16 @@
+.container.px-0.mt-4.mb-5.pb-5#home
+  .card.shadow.p-4
+    .d-flex.align-items-start
+      = link_to t('.new'), new_repository_path, { class: 'btn btn-primary mb-4' }
+    table.table.table-striped.table-hover.mt-4
+      thead
+        tr
+          th = t('.name')
+          th = t('.language')
+          th = t('.last_check_status')
+      tbody
+        - @repositories.each do |repository|
+          tr
+            td = link_to repository.name, repository_path(repository)
+            td = repository.language
+            td = 'TODO: last_check_status'

@@ -1,0 +1,7 @@
+.container.px-0.mt-4.mb-5.pb-5#home
+  .card.shadow.p-4
+    = simple_form_for @repository do |f|
+      .form-inputs
+        = f.input :github_id, as: :select, collection: @user_repos, label_method: :name, value_method: :id
+      .form-actions
+        = f.button :submit, class: 'btn btn-success'
