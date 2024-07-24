@@ -16,5 +16,9 @@
 #  updated_at :datetime         not null
 #
 class Repository < ApplicationRecord
+  extend Enumerize
+
   belongs_to :user
+
+  enumerize :language, in: %i[ruby]
 end

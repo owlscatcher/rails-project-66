@@ -14,14 +14,15 @@ module Web
 
     def new
       @repository = current_user.repositories.build
-      @users_repos = load_users_repos(current_user)
+      @users_repos = GithubClient.fetch_available_user_repos(current_user)
     end
 
     def create
-      @repository = current_user.repositories.build(repository_params)
+      @repository = current_user.repositories.find_or_initialize_by(repository_params)
 
       if @repository.save
         redirect_to repositories_path, notice: t('.success')
+        LoadReposJob.perform_later(@repository.id)
       else
         flash.now['alert'] = t('.fail')
         render :new, status: :unprocessable_entity
@@ -30,10 +31,8 @@ module Web
 
     private
 
-    def load_users_repos(user)
-      client = Octokit::Client.new(access_token: user.token, auto_paginate: true)
-
-      client.repos.map { |repo| [repo.name, repo.id] }
+    def repository_params
+      params.require(:repository).permit(:github_id)
     end
   end
 end
