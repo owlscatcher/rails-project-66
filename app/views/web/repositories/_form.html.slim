@@ -2,6 +2,6 @@
   .card.shadow.p-4
     = simple_form_for @repository do |f|
       .form-inputs
-        = f.input :github_id, as: :select, collection: @user_repos, label_method: :name, value_method: :id
+        = f.input :github_id, collection: @users_repos
       .form-actions
         = f.button :submit, class: 'btn btn-success'

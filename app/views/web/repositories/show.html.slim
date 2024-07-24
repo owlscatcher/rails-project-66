@@ -1,0 +1,34 @@
+.container.px-0.mt-4.mb-5.pb-5#repositories
+  .card.shadow.p-4
+    h1.mb-4 = @repository.full_name
+    p
+      span
+        strong.me-2 = t('.full_name')
+        = @repository.full_name
+    p
+      span
+        strong.me-2 = t('.language')
+        = @repository.language
+    p
+      span
+        strong.me-2 = t('.crated_at')
+        = l(@repository.created_at, format: :long)
+    p
+      span
+        strong.me-2 = t('.updated_at')
+        = l(@repository.updated_at, format: :long)
+
+    table.table.table-striped.table-hover.mt-4
+      thead
+        tr
+          th = t('.status')
+          th = t('.commit_id')
+          th = t('.checked')
+          th = t('.created_at')
+      / tbody
+      /   - @repositories.each do |repository|
+      /     tr
+      /       td = 'TODO: status'
+      /       td = 'TODO: commit_id'
+      /       td = 'TODO: checked'
+      /       td = 'TODO: created_at'
