@@ -51,43 +51,46 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '~> 3.1', '>= 3.1.2'
 end
 
 group :development do
-  gem 'annotate'
+  gem 'annotate', '~> 3.2'
   gem 'web-console'
 end
 
 group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'webmock', '~> 3.23', '>= 3.23.1'
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 1.5', '>= 1.5.6'
 end
+
+gem 'enumerize', '~> 2.8', '>= 2.8.1'
 
 gem 'faker', '~> 3.3', '>= 3.3.1'
 gem 'minitest-power_assert', '~> 0.3.1'
 
-gem 'omniauth'
-gem 'omniauth-github'
-gem 'omniauth-rails_csrf_protection'
+gem 'omniauth', '~> 2.1', '>= 2.1.2'
+gem 'omniauth-github', '~> 2.0', '>= 2.0.1'
+gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.2'
 
 gem 'pagy', '~> 8.4'
 
 gem 'rubocop-performance', '~> 1.21'
 gem 'rubocop-rails', '~> 2.24', '>= 2.24.1'
 
-gem 'sentry-rails'
-gem 'sentry-ruby'
-gem 'stackprof'
+gem 'sentry-rails', '~> 5.18', '>= 5.18.2'
+gem 'sentry-ruby', '~> 5.18', '>= 5.18.2'
+gem 'stackprof', '~> 0.2.26'
 
-gem 'simple_form'
+gem 'simple_form', '~> 5.3', '>= 5.3.1'
 
 gem 'slim', '~> 5.2', '>= 5.2.1'
 gem 'slim_lint', '~> 0.27.0'
 gem 'slim-rails', '~> 3.6', '>= 3.6.3'
 
-gem 'octokit'
+gem 'octokit', '~> 9.1'
