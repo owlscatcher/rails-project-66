@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "repository1",
+    "full_name": "user/repository1",
+    "language": "ruby",
+    "clone_url": "https://github.com/user/repository1.git",
+    "ssh_url": "git@github.com:user/repository1.git"
+  },
+  {
+    "id": 2,
+    "name": "repository2",
+    "full_name": "user/repository2",
+    "language": "ruby",
+    "clone_url": "https://github.com/user/repository2.git",
+    "ssh_url": "git@github.com:user/repository2.git"
+  },
+  {
+    "id": 3,
+    "name": "repository3",
+    "full_name": "user/repository3",
+    "language": "JavaScriipt",
+    "clone_url": "https://github.com/user/repository3.git",
+    "ssh_url": "git@github.com:user/repository3.git"
+  },
+  {
+    "id": 4,
+    "name": "repository4",
+    "full_name": "user/repository4",
+    "language": null,
+    "clone_url": "https://github.com/user/repository4.git",
+    "ssh_url": "git@github.com:user/repository4.git"
+  }
+]
