@@ -11,3 +11,17 @@ en:
         header: Repository Quality Analyzer
         info: "A project that helps you automatically monitor the quality of repositories on Github. It tracks changes and runs them through built-in analyzers. Then generates reports and sends them to the user."
         github_source: Source code
+    repositories:
+      index:
+        new: New
+        name: Title
+        language: Langeage
+        last_check_status: Last Check Status
+      show:
+        full_name: Title
+        language: Langeage
+        crated_at: Created date
+        updated_at: Updated date
+      create:
+        success: Repository has been added
+        fail: Repository could not be added
