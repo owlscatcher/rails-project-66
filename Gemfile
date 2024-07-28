@@ -69,6 +69,8 @@ group :production do
   gem 'pg', '~> 1.5', '>= 1.5.6'
 end
 
+gem 'dry-container', '~> 0.11.0'
+
 gem 'enumerize', '~> 2.8', '>= 2.8.1'
 
 gem 'faker', '~> 3.3', '>= 3.3.1'
