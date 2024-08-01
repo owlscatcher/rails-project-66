@@ -50,6 +50,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'byebug', '~> 11.1', '>= 11.1.3'
   gem 'debug', platforms: %i[mri windows]
   gem 'dotenv-rails', '~> 3.1', '>= 3.1.2'
 end
@@ -69,6 +70,9 @@ group :production do
   gem 'pg', '~> 1.5', '>= 1.5.6'
 end
 
+gem 'aasm', '~> 5.5'
+
+gem 'dry-auto_inject', '~> 1.0', '>= 1.0.1'
 gem 'dry-container', '~> 0.11.0'
 
 gem 'enumerize', '~> 2.8', '>= 2.8.1'
@@ -79,6 +83,8 @@ gem 'minitest-power_assert', '~> 0.3.1'
 gem 'omniauth', '~> 2.1', '>= 2.1.2'
 gem 'omniauth-github', '~> 2.0', '>= 2.0.1'
 gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.2'
+
+gem 'open3', '~> 0.2.1'
 
 gem 'pagy', '~> 8.4'
 

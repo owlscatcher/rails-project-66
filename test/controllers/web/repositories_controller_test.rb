@@ -7,9 +7,6 @@ class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
     @user = users(:one)
     @attrs = { github_id: 1 }
     @repository = repositories(:one)
-    @response_body = load_fixture('files/response.json')
-    @stub = stub_request(:get, 'https://api.github.com/user/repos?per_page=100')
-            .to_return(status: 200, body: @response_body, headers: { 'Content-Type' => 'application/json' })
 
     sign_in @user
   end

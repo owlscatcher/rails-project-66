@@ -1,0 +1,16 @@
+.container.px-0.mt-4.mb-5.pb-5#check-result
+  .card.shadow.p-4
+
+    .d-flex.align-items-start
+      = link_to_github_commit(@check)
+
+    h1.mb-4 = "#{t('.check')} ##{@check.id}"
+
+    table.table.table-striped.mt-4
+      thead
+        tr
+          th
+          th
+      tbody
+        tr
+

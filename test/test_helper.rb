@@ -7,6 +7,8 @@ require 'webmock/minitest'
 
 OmniAuth.config.test_mode = true
 
+WebMock.disable_net_connect!(allow_localhost: true)
+
 module ActiveSupport
   class TestCase
     # Run tests in parallel with specified workers

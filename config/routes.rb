@@ -8,7 +8,11 @@ Rails.application.routes.draw do
     get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
     delete 'auth/logout', to: 'auth#logout'
 
-    resources :repositories, only: %i[index show new create]
+    resources :repositories, only: %i[index show new create] do
+      scope module: :repositories do
+        resources :checks, only: %i[create show]
+      end
+    end
   end
 
   get 'up' => 'rails/health#show', as: :rails_health_check

@@ -1,6 +1,11 @@
 .container.px-0.mt-4.mb-5.pb-5#repositories
   .card.shadow.p-4
     h1.mb-4 = @repository.full_name
+
+    .d-flex.align-items-start
+      = link_to t('.check'),
+      repository_checks_path(@repository), class: 'btn btn-primary mb-4', data: { turbo_method: :post }
+
     p
       span
         strong.me-2 = t('.full_name')
@@ -21,14 +26,16 @@
     table.table.table-striped.table-hover.mt-4
       thead
         tr
+          th{ scope = 'col' }
           th = t('.status')
           th = t('.commit_id')
           th = t('.checked')
           th = t('.created_at')
-      / tbody
-      /   - @repositories.each do |repository|
-      /     tr
-      /       td = 'TODO: status'
-      /       td = 'TODO: commit_id'
-      /       td = 'TODO: checked'
-      /       td = 'TODO: created_at'
+      tbody
+        - @repository.checks.each do |check|
+            tr
+              td = link_to check.id, repository_check_path(@repository, check)
+              td = check.aasm.human_state
+              td = link_to_github_commit(check)
+              td = t(check.passed?)
+              td = l(check.created_at, format: :long)
