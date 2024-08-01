@@ -22,6 +22,14 @@ en:
         language: Langeage
         crated_at: Created date
         updated_at: Updated date
+        check: Check
       create:
         success: Repository has been added
         fail: Repository could not be added
+      checks:
+        show:
+          repo: To repository
+          check: Check
+          status: Status
+          created_at: Created date
+          updated_at: Updated date

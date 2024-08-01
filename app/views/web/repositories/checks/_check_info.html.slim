@@ -1,0 +1,14 @@
+table.table.mt-4.mb-4
+  tbody
+    tr
+      td = Repository::Check.human_attribute_name(:created_at)
+      td = check.created_at
+    tr
+      td = Repository::Check.human_attribute_name(:state)
+      td = check.state
+    tr
+      td = Repository::Check.human_attribute_name(:passed)
+      td = check.passed
+    tr
+      td = Repository::Check.human_attribute_name(:commit_id)
+      td = link_to_github_commit(check)

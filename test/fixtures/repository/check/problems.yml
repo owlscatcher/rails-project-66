@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rule: MyString
+  message: MyText
+  location: MyString
+  check: one
+  file: one
+
+two:
+  rule: MyString
+  message: MyText
+  location: MyString
+  check: two
+  file: two

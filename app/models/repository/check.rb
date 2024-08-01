@@ -4,6 +4,8 @@ class Repository::Check < ApplicationRecord
   include AASM
 
   belongs_to :repository
+  has_many :files, dependent: :destroy
+  has_many :problems, dependent: :destroy
 
   aasm column: :state do
     state :created, initial: true

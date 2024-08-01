@@ -1,0 +1,17 @@
+table.table.mt-4.mb-4
+  thead
+    tr
+      th = Repository::Check::Problem.human_attribute_name(:message)
+      th = Repository::Check::Problem.human_attribute_name(:rule)
+      th = Repository::Check::Problem.human_attribute_name(:location)
+  tbody
+    - files.each do |file|
+      tr
+        td = link_to_github_file(file.check, file.path)
+        td
+        td
+      - file.problems.each do |problem|
+        tr
+          td = problem.message
+          td = problem.rule
+          td = problem.location

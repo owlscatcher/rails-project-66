@@ -22,6 +22,14 @@ ru:
         language: Язык
         crated_at: Дата создания
         updated_at: Дата обновления
+        check: Проверка
       create:
         success: Репозиторий успешно добавлен
         fail: Репозиторий не добавлен
+      checks:
+        show:
+          repo: К репозиторию
+          check: Проверка
+          status: Статус
+          created_at: Дата создания
+          updated_at: Дата обновления

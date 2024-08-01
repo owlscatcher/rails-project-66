@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class CheckReposJobTest < ActiveJob::TestCase
+class Repository::Check::FileTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
