@@ -1,0 +1,33 @@
+en:
+  activerecord:
+    models:
+      check: Check
+      checks: Checks
+      repository: Repository
+      repositories: Repositories
+      user: User
+      users: Users
+    attributes:
+      repository/check:
+        commit_id: Commit ID
+        repository: Repository
+        state: State
+        states:
+          created: Created
+          in_progress: In process
+          failed: Failed
+          finished: Finished
+        passed: Passed?
+        created_at: Created At
+      repository:
+        name: Name
+        github_id: GitHub ID
+        language: Language
+        clone_url: Clone URL
+        ssh_url: SSH URL
+        created_at: Created At
+        updated_at: Updated At
+      repository/check/problem:
+        message: Message
+        rule: Rule ID
+        location: Location

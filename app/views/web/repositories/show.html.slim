@@ -8,29 +8,29 @@
 
     p
       span
-        strong.me-2 = t('.full_name')
+        strong.me-2 = Repository.human_attribute_name(:name)
         = @repository.full_name
     p
       span
-        strong.me-2 = t('.language')
+        strong.me-2 = Repository.human_attribute_name(:language)
         = @repository.language
     p
       span
-        strong.me-2 = t('.crated_at')
+        strong.me-2 = Repository.human_attribute_name(:created_at)
         = l(@repository.created_at, format: :long)
     p
       span
-        strong.me-2 = t('.updated_at')
+        strong.me-2 = Repository.human_attribute_name(:updated_at)
         = l(@repository.updated_at, format: :long)
 
     table.table.table-striped.table-hover.mt-4
       thead
         tr
           th{ scope = 'col' }
-          th = t('.status')
-          th = t('.commit_id')
-          th = t('.checked')
-          th = t('.created_at')
+          th = Repository::Check.human_attribute_name(:state)
+          th = Repository::Check.human_attribute_name(:commit_id)
+          th = Repository::Check.human_attribute_name(:passed)
+          th = Repository::Check.human_attribute_name(:created_at)
       tbody
         - @repository.checks.each do |check|
             tr

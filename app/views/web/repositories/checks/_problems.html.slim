@@ -1,4 +1,4 @@
-table.table.mt-4.mb-4
+table.table.table-hover.mt-4.mb-4
   thead
     tr
       th = Repository::Check::Problem.human_attribute_name(:message)
@@ -6,7 +6,7 @@ table.table.mt-4.mb-4
       th = Repository::Check::Problem.human_attribute_name(:location)
   tbody
     - files.each do |file|
-      tr
+      tr.table-light
         td = link_to_github_file(file.check, file.path)
         td
         td

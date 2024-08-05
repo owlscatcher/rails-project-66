@@ -2,7 +2,7 @@ table.table.mt-4.mb-4
   tbody
     tr
       td = Repository::Check.human_attribute_name(:created_at)
-      td = check.created_at
+      td = l(check.created_at, format: :long)
     tr
       td = Repository::Check.human_attribute_name(:state)
       td = check.state

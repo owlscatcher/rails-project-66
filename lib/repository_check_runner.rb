@@ -29,6 +29,7 @@ class RepositoryCheckRunner
     end
 
     repository_check.commit_id = commit_id
+    repository_check.passed = repository_check.problems.count.zero?
     repository_check.save
 
     repository_check_workflow.clean_work_dir(work_dir)
