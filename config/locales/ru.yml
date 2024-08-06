@@ -1,4 +1,6 @@
 ru:
+  True: Да
+  False: Нет
   date:
     formats:
       default: "%d.%m.%Y"

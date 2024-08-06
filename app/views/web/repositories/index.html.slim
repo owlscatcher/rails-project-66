@@ -9,8 +9,14 @@
           th = Repository.human_attribute_name(:language)
           th = t('.last_check_status')
       tbody
-        - @repositories.each do |repository|
+        - @repositories.latest.each do |repository|
           tr
-            td = link_to repository.name, repository_path(repository)
+            - if repository.name
+              td = link_to repository.name, repository_path(repository)
+            - else
+              td = link_to '-', repository_path(repository)
             td = repository.language
-            td = repository.checks.last&.passed
+            - if repository.checks.count.zero?
+              td = t('.check_is_not_started')
+            - else
+              td = t(repository.checks.last&.passed?)

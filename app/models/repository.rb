@@ -22,4 +22,6 @@ class Repository < ApplicationRecord
   has_many :checks, dependent: :destroy
 
   enumerize :language, in: %i[ruby]
+
+  scope :latest, -> { order(created_at: :desc) }
 end

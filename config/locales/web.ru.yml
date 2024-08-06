@@ -17,6 +17,7 @@ ru:
         name: Название
         language: Язык
         last_check_status: Статус последней проверки
+        check_is_not_started: Проверка не запускалась
       show:
         full_name: Название
         language: Язык

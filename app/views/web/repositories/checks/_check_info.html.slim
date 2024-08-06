@@ -5,10 +5,10 @@ table.table.mt-4.mb-4
       td = l(check.created_at, format: :long)
     tr
       td = Repository::Check.human_attribute_name(:state)
-      td = check.state
+      td = localized_check_state(check.aasm.human_state)
     tr
       td = Repository::Check.human_attribute_name(:passed)
-      td = check.passed
+      td = t(check.passed?)
     tr
       td = Repository::Check.human_attribute_name(:commit_id)
       td = link_to_github_commit(check)

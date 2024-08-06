@@ -32,7 +32,7 @@
           th = Repository::Check.human_attribute_name(:passed)
           th = Repository::Check.human_attribute_name(:created_at)
       tbody
-        - @repository.checks.each do |check|
+        - @repository.checks.latest.each do |check|
             tr
               td = link_to check.id, repository_check_path(@repository, check)
               td = localized_check_state(check.aasm.human_state)

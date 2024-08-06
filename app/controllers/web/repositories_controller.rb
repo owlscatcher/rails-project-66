@@ -3,6 +3,7 @@
 module Web
   class RepositoriesController < ApplicationController
     before_action :authenticate_user!, only: %i[index show new create]
+    before_action :set_cached_repos, only: :new
 
     def index
       @repositories = current_user.repositories
@@ -14,7 +15,6 @@ module Web
 
     def new
       @repository = current_user.repositories.build
-      @users_repos = GithubClient.fetch_available_user_repos(current_user)
     end
 
     def create
@@ -33,6 +33,12 @@ module Web
 
     def repository_params
       params.require(:repository).permit(:github_id)
+    end
+
+    def set_cached_repos
+      @users_repos = Rails.cache.fetch("#{current_user.id}/repos", expires_in: 15.minutes) do
+        GithubClient.fetch_available_user_repos(current_user)
+      end
     end
   end
 end

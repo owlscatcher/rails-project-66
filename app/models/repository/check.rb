@@ -23,4 +23,6 @@ class Repository::Check < ApplicationRecord
       transitions from: :in_progress, to: :failed
     end
   end
+
+  scope :latest, -> { order(created_at: :desc) }
 end
