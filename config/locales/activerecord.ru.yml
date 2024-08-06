@@ -13,10 +13,10 @@ ru:
         repository: Репозиторий
         state: Статус
         states:
-          created: Создана
-          in_progress: В процессе
-          failed: Прервана
-          finished: Завершена
+          Created: Создана
+          In_progress: В процессе
+          Failed: Прервана
+          Finished: Завершена
         passed: Проверка пройдена?
         created_at: Дата создания
       repository:
@@ -30,4 +30,4 @@ ru:
       repository/check/problem:
         message: Сообщение
         rule: Идентификатор правила
-        location: Расположение
+        location: Строка и символ

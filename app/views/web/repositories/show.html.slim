@@ -35,7 +35,7 @@
         - @repository.checks.each do |check|
             tr
               td = link_to check.id, repository_check_path(@repository, check)
-              td = check.aasm.human_state
+              td = localized_check_state(check.aasm.human_state)
               td = link_to_github_commit(check)
               td = t(check.passed?)
               td = l(check.created_at, format: :long)

@@ -13,10 +13,10 @@ en:
         repository: Repository
         state: State
         states:
-          created: Created
-          in_progress: In process
-          failed: Failed
-          finished: Finished
+          Created: Created
+          In_progress: In process
+          Failed: Failed
+          Finished: Finished
         passed: Passed?
         created_at: Created At
       repository:
@@ -30,4 +30,4 @@ en:
       repository/check/problem:
         message: Message
         rule: Rule ID
-        location: Location
+        location: String and symbol
