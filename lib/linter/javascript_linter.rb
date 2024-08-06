@@ -5,8 +5,9 @@ module Linter
     def command
       "node --no-warnings \
         #{Rails.root.join('node_modules/.bin/eslint')} . \
-        -c #{Rails.root.join('lib/linter/configs/eslint.config.js')} \
-        -f json"
+        -c #{Rails.root.join('lib/linter/configs/.eslintrc.yml')} \
+        -f json \
+        --no-eslintrc"
     end
 
     def build_files_with_problems(result, work_dir)

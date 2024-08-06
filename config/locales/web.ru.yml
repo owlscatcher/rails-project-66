@@ -34,3 +34,5 @@ ru:
           status: Статус
           created_at: Дата создания
           updated_at: Дата обновления
+        create:
+          success: Проверка была запущена

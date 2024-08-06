@@ -21,7 +21,7 @@ class Repository < ApplicationRecord
   belongs_to :user
   has_many :checks, dependent: :destroy
 
-  enumerize :language, in: %i[ruby]
+  enumerize :language, in: %i[ruby javascript]
 
   scope :latest, -> { order(created_at: :desc) }
 end

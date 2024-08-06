@@ -14,7 +14,7 @@ en:
         state: State
         states:
           Created: Created
-          In_progress: In process
+          In progress: In process
           Failed: Failed
           Finished: Finished
         passed: Passed?

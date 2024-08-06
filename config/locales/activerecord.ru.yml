@@ -14,7 +14,7 @@ ru:
         state: Статус
         states:
           Created: Создана
-          In_progress: В процессе
+          In progress: В процессе
           Failed: Прервана
           Finished: Завершена
         passed: Проверка пройдена?
