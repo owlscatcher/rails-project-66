@@ -17,5 +17,6 @@ class LoadReposJob < ApplicationJob
     }
 
     repo.update!(params)
+    GithubClient.add_repo_webhook(repo)
   end
 end

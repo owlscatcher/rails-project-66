@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
-require 'octokit'
-
 class ApplicationController < ActionController::Base
   include AuthConcern
-  include Pagy::Backend
 
   helper_method :signed_in?, :current_user
 

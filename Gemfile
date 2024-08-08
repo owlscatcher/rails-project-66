@@ -88,6 +88,7 @@ gem 'open3', '~> 0.2.1'
 
 gem 'pagy', '~> 8.4'
 
+gem 'responders'
 gem 'rubocop-performance', '~> 1.21'
 gem 'rubocop-rails', '~> 2.24', '>= 2.24.1'
 
