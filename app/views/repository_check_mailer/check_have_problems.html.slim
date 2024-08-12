@@ -1,0 +1,27 @@
+- link_style = "padding: 10px 20px; \
+                background-color: #f44336; \
+                color: white; \
+                text-decoration: none; \
+                border-radius: 5px; \
+                display: inline-block;"
+
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    title = t('.title', repository: @repo_name)
+  body
+    div style="text-align: center;"
+
+      p = t('.oops')
+
+      p = t('.description', problems_count: @problems_count, files_count: @files_count)
+
+      p
+        = link_to t('.check_link'), repository_check_url(@check.repository, @check),
+        style: link_style,
+        target: '_blank', rel: 'noopener'
+
+      footer
+        p Best regards,
+        p = link_to 'Owls\' Catcher', ENV.fetch('BASE_URL', 'http://0.0.0.0:3000')

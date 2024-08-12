@@ -18,10 +18,6 @@ Rails.application.configure do
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
-  config.cache_store = :memory_store
-  config.public_file_server.headers = {
-    'Cache-Control' => "public, max-age=#{2.days.to_i}"
-  }
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
   # key such as config/credentials/production.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
@@ -78,6 +74,15 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "rails_project_66_production"
 
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name: ENV.fetch('MAILER_USER', nil),
+    password: ENV.fetch('MAILER_PSWD', nil),
+    address: ENV.fetch('MAILER_HOST', nil),
+    port: ENV.fetch('MAILER_PORT', nil),
+    authentication: :login
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

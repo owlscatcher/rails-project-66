@@ -1,0 +1,25 @@
+- link_style = "padding: 10px 20px; \
+                background-color: #f44336; \
+                color: white; \
+                text-decoration: none; \
+                border-radius: 5px; \
+                display: inline-block;"
+
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    title = t('.title', repository: @repo_name)
+  body
+    div style="text-align: center;"
+
+      p = t('.description')
+
+      p
+        = link_to t('.repos_link'), repository_url(@check.repository),
+        style: link_style,
+        target: '_blank', rel: 'noopener'
+
+      footer
+        p Best regards,
+        p = link_to 'Owls\' Catcher', ENV.fetch('BASE_URL', 'http://0.0.0.0:3000')

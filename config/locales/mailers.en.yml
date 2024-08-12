@@ -1,0 +1,14 @@
+en:
+  repository_check_mailer:
+    failed: "An error occurred while checking the %{repository} repository"
+    have_problems: "Checking the %{repository} repository detected problems"
+    check_failed:
+      title: "An error occurred while checking the %{repository} repository"
+      repos_link: "To repository"
+      description: "Try again at a later time. If the error is repeated, contact support."
+    check_have_problems:
+      title: "Checking the %{repository} repository detected problems"
+      description: "Problem: %{problems_count} in %{files_count} :Files"
+      oops: "Ooop... We have a problem"
+      check_link: "Detailed report"
+      regards: "Best regards, "

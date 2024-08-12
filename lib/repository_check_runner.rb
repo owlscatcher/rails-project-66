@@ -34,10 +34,14 @@ class RepositoryCheckRunner
 
     repository_check_workflow.clean_work_dir(work_dir)
     repository_check.finish!
+
+    RepositoryCheckMailer.check_have_problems(repository_check.id).deliver_later unless repository_check.passed
   rescue StandardError => e
     Rails.logger.error e
 
     repository_check_workflow.clean_work_dir(work_dir)
     repository_check.fail!
+
+    RepositoryCheckMailer.check_failed(repository_check.id).deliver_later
   end
 end

@@ -1,0 +1,14 @@
+ru:
+  repository_check_mailer:
+    failed: "При проверке репозитория %{repository} произошла ошибка"
+    have_problems: "При проверке репозитория %{repository} обнаружены проблемы"
+    check_failed:
+      title: "При проверке репозитория %{repository} произошла ошибка"
+      repos_link: "К репозиторию"
+      description: "Повторите попытку позднее. Если ошибка повторяется, обратитесь в службу поддержки."
+    check_have_problems:
+      title: "При проверке репозитория %{repository} обнаружены проблемы"
+      description: "Проблем: %{problems_count} в %{files_count} :Файлах"
+      oops: "Упс... У нас проблемы..."
+      check_link: "Детальный отчёт"
+      regards: "С наилучшими пожеланиями, "
