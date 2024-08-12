@@ -25,7 +25,10 @@ module GithubClient
         },
         {
           events: ['push'],
-          active: true
+          active: true,
+          headers: {
+            'bypass-tunnel-reminder' => 'true'
+          }
         }
       )
     end
