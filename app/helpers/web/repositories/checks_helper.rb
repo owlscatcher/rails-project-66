@@ -10,10 +10,10 @@ module Web::Repositories::ChecksHelper
   end
 
   def build_commit_url(check)
-    [check.repository.clone_url.gsub(/\.git$/, ''), 'commit', check.commit_id].join('/')
+    [check.repository.html_url, 'commit', check.commit_id].join('/')
   end
 
   def build_path_url(check, path)
-    [check.repository.clone_url.gsub(/\.git$/, ''), 'tree', check.commit_id, path].join('/')
+    [check.repository.html_url, 'tree', check.commit_id, path].join('/')
   end
 end

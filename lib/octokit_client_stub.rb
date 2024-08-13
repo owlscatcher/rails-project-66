@@ -47,4 +47,6 @@ class OctokitClientStub
   def repo(*)
     REPOS.first
   end
+
+  def create_hook(*); end
 end

@@ -5,7 +5,7 @@ class ApplicationContainer
 
   if Rails.env.test?
     register(:octokit_client) { OctokitClientStub }
-    register(:repository_check_workflow_stub) { RepositoryCheckWorkflowStub }
+    register(:repository_check_workflow) { RepositoryCheckWorkflowStub }
   else
     register(:octokit_client) { Octokit::Client }
     register(:repository_check_workflow) { RepositoryCheckWorkflow }
