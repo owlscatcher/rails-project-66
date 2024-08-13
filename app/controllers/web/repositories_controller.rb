@@ -20,6 +20,8 @@ module Web
     def create
       @repository = current_user.repositories.find_or_initialize_by(repository_params)
 
+      authorize @repository
+
       if @repository.save
         redirect_to repositories_path, notice: t('.success')
         LoadReposJob.perform_later(@repository.id)

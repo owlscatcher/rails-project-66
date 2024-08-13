@@ -31,3 +31,9 @@ ru:
         message: Сообщение
         rule: Идентификатор правила
         location: Строка и символ
+    errors:
+      models:
+        repository:
+          attributes:
+            github_id:
+              blank: не может быть пустым

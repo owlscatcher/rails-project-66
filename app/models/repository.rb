@@ -23,5 +23,7 @@ class Repository < ApplicationRecord
 
   enumerize :language, in: %i[ruby javascript]
 
+  validates :github_id, presence: true, uniqueness: true
+
   scope :latest, -> { order(created_at: :desc) }
 end

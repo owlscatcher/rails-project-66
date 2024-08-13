@@ -9,6 +9,10 @@ table.table.mt-4.mb-4
     tr
       td = Repository::Check.human_attribute_name(:passed)
       td = t(check.passed?)
+    - if not check.passed
+      tr
+        td = t('.problem_count')
+        td = check.problems.count
     tr
       td = Repository::Check.human_attribute_name(:commit_id)
       td = link_to_github_commit(check)

@@ -87,6 +87,7 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.2'
 gem 'open3', '~> 0.2.1'
 
 gem 'pagy', '~> 8.4'
+gem 'pundit', '~> 2.3', '>= 2.3.2'
 
 gem 'responders'
 gem 'rubocop-performance', '~> 1.21'

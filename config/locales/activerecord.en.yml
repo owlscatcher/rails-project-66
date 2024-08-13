@@ -31,3 +31,9 @@ en:
         message: Message
         rule: Rule ID
         location: String and symbol
+    errors:
+      models:
+        repository:
+          attributes:
+            github_id:
+              blank: can't be blank
