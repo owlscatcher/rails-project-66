@@ -5,18 +5,18 @@ module RepositoryCheckWorkflowStub
     def clean_work_dir(*); end
 
     def clone_repo(*)
-      '13e806c'
+      '028f342'
     end
 
     def run_check(*)
       {
         'files' => [
           {
-            'path' => 'Gemfile',
+            'path' => 'app/controllers/api/checks_controller.rb',
             'offenses' => []
           },
           {
-            'path' => 'abc.gemspec',
+            'path' => 'app/controllers/application_controller.rb',
             'offenses' => []
           }
         ]

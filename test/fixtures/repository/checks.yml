@@ -4,10 +4,10 @@ one:
   commit_id: 1
   repository: one
   aasm_state: created
-  passed: false
+  passed: true
 
 two:
   commit_id: 2
   repository: two
   aasm_state: in_progress
-  passed: false
+  passed: true
