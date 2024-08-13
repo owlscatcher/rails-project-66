@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class RepositoryCheckRunner
-  include Import['repository_check_workflow']
+  include Dry::AutoInject(ApplicationContainer)['repository_check_workflow']
 
   def run(repository_check)
     return unless repository_check.may_start?
