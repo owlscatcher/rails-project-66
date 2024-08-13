@@ -27,7 +27,7 @@
       thead
         tr
           th{ scope = 'col' }
-          th = Repository::Check.human_attribute_name(:state)
+          th = Repository::Check.human_attribute_name(:aasm_state)
           th = Repository::Check.human_attribute_name(:commit_id)
           th = Repository::Check.human_attribute_name(:passed)
           th = Repository::Check.human_attribute_name(:created_at)

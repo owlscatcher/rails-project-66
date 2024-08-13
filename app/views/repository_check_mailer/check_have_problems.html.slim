@@ -23,5 +23,5 @@ html
         target: '_blank', rel: 'noopener'
 
       footer
-        p Best regards,
+        p = t('.regards')
         p = link_to 'Owls\' Catcher', ENV.fetch('BASE_URL', 'http://0.0.0.0:3000')

@@ -11,8 +11,8 @@ ru:
       repository/check:
         commit_id: ID Коммита
         repository: Репозиторий
-        state: Статус
-        states:
+        aasm_state: Статус
+        aasm_states:
           Created: Создана
           In progress: В процессе
           Failed: Прервана

@@ -2,6 +2,6 @@
 
 module ApplicationHelper
   def localized_check_state(state)
-    I18n.t("activerecord.attributes.repository/check.states.#{state}")
+    I18n.t("activerecord.attributes.repository/check.aasm_states.#{state}")
   end
 end

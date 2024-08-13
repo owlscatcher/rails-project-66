@@ -7,7 +7,7 @@ class Repository::Check < ApplicationRecord
   has_many :files, dependent: :destroy
   has_many :problems, dependent: :destroy
 
-  aasm column: :state do
+  aasm column: :aasm_state do
     state :created, initial: true
     state :in_progress, :finished, :failed
 

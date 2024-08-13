@@ -4,7 +4,7 @@ table.table.mt-4.mb-4
       td = Repository::Check.human_attribute_name(:created_at)
       td = l(check.created_at, format: :long)
     tr
-      td = Repository::Check.human_attribute_name(:state)
+      td = Repository::Check.human_attribute_name(:aasm_state)
       td = localized_check_state(check.aasm.human_state)
     tr
       td = Repository::Check.human_attribute_name(:passed)

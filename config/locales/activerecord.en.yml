@@ -11,8 +11,8 @@ en:
       repository/check:
         commit_id: Commit ID
         repository: Repository
-        state: State
-        states:
+        aasm_state: State
+        aasm_states:
           Created: Created
           In progress: In process
           Failed: Failed
