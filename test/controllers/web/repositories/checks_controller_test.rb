@@ -13,10 +13,16 @@ class Web::Repositories::ChecksControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create new check' do
     sign_in @user
+    repository = repositories :without_checks
+    post repository_checks_path(repository), params: { repository_id: @repository.id }
 
-    assert_difference 'Repository::Check.count', 1 do
-      post repository_checks_path(@repository), params: { repository_id: @repository.id }
-    end
+    assert_response :redirect
+
+    check = repository.checks.last
+
+    assert { check }
+    assert { check.finished? }
+    assert { check.passed }
   end
 
   test "should not create new check for other user's repository" do

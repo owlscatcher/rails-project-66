@@ -17,6 +17,7 @@ en:
         name: Title
         language: Langeage
         last_check_status: Last Check Status
+        check_is_not_started: Check is not started
       show:
         full_name: Title
         language: Langeage
@@ -35,3 +36,5 @@ en:
           updated_at: Updated date
         create:
           success: Check has been started
+        check_info:
+          problem_count: Problems count

@@ -31,3 +31,12 @@ two:
   clone_url: MyString
   ssh_url: MyString
   user: two
+
+without_checks:
+  name: WOchecks
+  github_id: 3
+  full_name: WOchecks
+  language: Ruby
+  clone_url: MyString
+  ssh_url: MyString
+  user: one

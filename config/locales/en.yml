@@ -1,6 +1,6 @@
 en:
-  true: "Yes"
-  false: "No"
+  true: "Ok"
+  false: "Have a problems"
   time:
     formats:
       default: "%e %B %Y %H:%M"

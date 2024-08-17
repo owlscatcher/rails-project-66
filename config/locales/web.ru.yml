@@ -36,3 +36,5 @@ ru:
           updated_at: Дата обновления
         create:
           success: Проверка была запущена
+        check_info:
+          problem_count: Количество проблем
