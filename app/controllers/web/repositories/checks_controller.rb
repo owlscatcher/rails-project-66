@@ -14,7 +14,7 @@ module Web
         authorize @check
 
         if @check.save
-          CheckReposJob.perform_later(@check.id)
+          CheckReposJob.perform_now(@check.id)
 
           redirect_to repository_path(resource_repository), notice: t('.success')
         else

@@ -36,7 +36,7 @@ without_checks:
   name: WOchecks
   github_id: 3
   full_name: WOchecks
-  language: Ruby
+  language: ruby
   clone_url: MyString
   ssh_url: MyString
   user: one

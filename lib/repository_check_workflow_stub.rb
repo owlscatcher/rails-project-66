@@ -8,7 +8,7 @@ module RepositoryCheckWorkflowStub
       '028f342'
     end
 
-    def run_check(*)
+    def lint_repo(*)
       {
         'files' => [
           {
