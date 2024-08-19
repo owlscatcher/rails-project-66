@@ -16,7 +16,7 @@ module GithubClient
     end
 
     def add_repo_webhook(repository)
-      return if hook_exists?(repository)
+      # return if hook_exists?(repository)
 
       client(repository.user).create_hook(
         repository.github_id,
@@ -35,10 +35,10 @@ module GithubClient
       )
     end
 
-    def hook_exists?(repository)
-      client(repository.user)
-        .hooks(repository.github_id)
-        .any? { |hook| hook.config.url == Rails.application.routes.url_helpers.api_checks_url }
-    end
+    # def hook_exists?(repository)
+    #   client(repository.user)
+    #     .hooks(repository.github_id)
+    #     .any? { |hook| hook.config.url == Rails.application.routes.url_helpers.api_checks_url }
+    # end
   end
 end
