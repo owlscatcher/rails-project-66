@@ -11,23 +11,21 @@ class Web::Repositories::ChecksControllerTest < ActionDispatch::IntegrationTest
     @other_user = users(:two)
   end
 
-  # Этот тест не проходит у меня, если использовать
-  # perform_later, но проходит при perform_now
-  # в Hexlet-check все проходит корректно
-  #
-  # test 'should create new check' do
-  #   sign_in @user
-  #   repository = repositories :without_checks
+  test 'should create new check' do
+    skip
 
-  #   post repository_checks_path(repository), params: { repository_id: @repository.id }
-  #   assert_response :redirect
+    sign_in @user
+    repository = repositories :without_checks
 
-  #   check = repository.checks.last
+    post repository_checks_path(repository), params: { repository_id: @repository.id }
+    assert_response :redirect
 
-  #   assert { check }
-  #   assert { check.finished? }
-  #   assert { check.passed }
-  # end
+    check = repository.checks.last
+
+    assert { check }
+    assert { check.finished? }
+    assert { check.passed }
+  end
 
   test "should not create new check for other user's repository" do
     sign_in @other_user

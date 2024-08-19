@@ -18,5 +18,7 @@
             td = repository.language
             - if repository.checks.count.zero?
               td = t('.check_is_not_started')
+            - elsif repository.checks.last&.passed.nil?
+              td = '-'
             - else
               td = t(repository.checks.last&.passed?)

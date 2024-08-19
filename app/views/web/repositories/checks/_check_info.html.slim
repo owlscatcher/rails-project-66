@@ -8,8 +8,11 @@ table.table.mt-4.mb-4
       td = localized_check_state(check.aasm.human_state)
     tr
       td = Repository::Check.human_attribute_name(:passed)
-      td = t(check.passed?)
-    - unless check.passed
+      - if check.passed.nil?
+        td = '-'
+      - else
+        td = t(check.passed?)
+    - if !check.passed && !check.passed.nil?
       tr
         td = t('.problem_count')
         td = check.problems.count

@@ -7,4 +7,5 @@
     h1.mb-4 = "#{t('.check')} ##{@check.id}"
 
     = render 'check_info', check: @check
-    = render 'problems', files: @check.files
+    - if @check.files.any?
+      = render 'problems', files: @check.files
