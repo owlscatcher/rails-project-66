@@ -16,42 +16,42 @@ module GithubClient
     end
 
     def add_repo_webhook(repository)
-      existed_hook_id = find_existed_hook(repository)
+      # existed_hook_id = find_existed_hook(repository)
 
-      if existed_hook_id.nil?
-        client(repository.user).create_hook(
-          repository.github_id,
-          'web',
-          {
-            url: Rails.application.routes.url_helpers.api_checks_url,
-            content_type: 'json'
-          },
-          {
-            events: ['push'],
-            active: true,
-            headers: {
-              'bypass-tunnel-reminder' => 'true'
-            }
+      # if existed_hook_id.nil?
+      client(repository.user).create_hook(
+        repository.github_id,
+        'web',
+        {
+          url: Rails.application.routes.url_helpers.api_checks_url,
+          content_type: 'json'
+        },
+        {
+          events: ['push'],
+          active: true,
+          headers: {
+            'bypass-tunnel-reminder' => 'true'
           }
-        )
-      else
-        client(repository.user).remove_hook(repository.github_id, existed_hook_id)
-        add_repo_webhook(repository)
-      end
+        }
+      )
+      # else
+      #   client(repository.user).remove_hook(repository.github_id, existed_hook_id)
+      #   add_repo_webhook(repository)
+      # end
     end
 
-    def find_existed_hook(repository)
-      hook_id = nil
+    # def find_existed_hook(repository)
+    #   hook_id = nil
 
-      hooks = client(repository.user).hooks(repository.github_id)
+    #   hooks = client(repository.user).hooks(repository.github_id)
 
-      hooks.each do |hook|
-        if hook.config.url == Rails.application.routes.url_helpers.api_checks_url
-          hook_id = hook.id
-        end
-      end
+    #   hooks.each do |hook|
+    #     if hook.config.url == Rails.application.routes.url_helpers.api_checks_url
+    #       hook_id = hook.id
+    #     end
+    #   end
 
-      hook_id
-    end
+    #   hook_id
+    # end
   end
 end
